@@ -8,6 +8,8 @@ import AppTask from "./App";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import SubCatalog from "./pages/catalog/SubCatalog";
+import DetailSubCatalog from "./pages/catalog/subCatalog/DetailSubCatalog";
+import Seller from "./pages/catalog/subCatalog/detailSubCatalog/Seller";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +19,13 @@ root.render(
               <Route path={"/"} element={<AppTask/>}>
                   <Route index element={<Home/>}/>
                   <Route path={"catalog"} element={<Catalog/>}>
-                      <Route path={"subcatalog"} element={<SubCatalog/>}></Route>
+                      <Route path={"subcatalog"} element={<SubCatalog/>}>
+                          <Route path={"detail"} element={<DetailSubCatalog/>}>
+                              <Route path={"seller"} element={<Seller/>}>
+
+                              </Route>
+                          </Route>
+                      </Route>
                   </Route>
               </Route>
           </Routes>
