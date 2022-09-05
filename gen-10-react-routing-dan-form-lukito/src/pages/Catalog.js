@@ -5,7 +5,7 @@ import {Link, Outlet} from "react-router-dom";
 function Catalog(){
     return<>
 
-        <h1>List Product</h1>
+        <h3>List Product</h3>
         <ul>
             <li>Gitar <Outlet/></li>
         </ul>

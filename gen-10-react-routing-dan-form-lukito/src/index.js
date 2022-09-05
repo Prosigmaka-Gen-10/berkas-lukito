@@ -10,6 +10,8 @@ import Catalog from "./pages/Catalog";
 import SubCatalog from "./pages/catalog/SubCatalog";
 import DetailSubCatalog from "./pages/catalog/subCatalog/DetailSubCatalog";
 import Seller from "./pages/catalog/subCatalog/detailSubCatalog/Seller";
+import Review from "./pages/catalog/subCatalog/detailSubCatalog/seller/Review";
+import Contact from "./pages/catalog/subCatalog/detailSubCatalog/seller/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +24,8 @@ root.render(
                       <Route path={"subcatalog"} element={<SubCatalog/>}>
                           <Route path={"detail"} element={<DetailSubCatalog/>}>
                               <Route path={"seller"} element={<Seller/>}>
-
+                                  <Route path={"review"} element={<Review/>}/>
+                                  <Route path={"contact"} element={<Contact/>}/>
                               </Route>
                           </Route>
                       </Route>

@@ -25,9 +25,9 @@ function App() {
 
 function AppTask(){
   return(
-      <div className={"App.js"}>
-        <header>Music Store Ito He..He..</header>
-        <br/>
+      <div>
+        <h1>Music Store Ito</h1>
+        <hr/>
         <Outlet/>
       </div>
   )
