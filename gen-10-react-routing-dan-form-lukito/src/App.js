@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {Outlet} from "react-router-dom";
 
 function App() {
   return (
@@ -22,4 +23,14 @@ function App() {
   );
 }
 
-export default App;
+function AppTask(){
+  return(
+      <div className={"App.js"}>
+        <header>Music Store Ito He..He..</header>
+        <br/>
+        <Outlet/>
+      </div>
+  )
+}
+
+export default AppTask;
