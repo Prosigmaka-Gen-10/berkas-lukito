@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import AppTask from "./App";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
+import SubCatalog from "./pages/catalog/SubCatalog";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,9 @@ root.render(
           <Routes>
               <Route path={"/"} element={<AppTask/>}>
                   <Route index element={<Home/>}/>
-                  <Route path={"catalog"} element={<Catalog/>}/>
+                  <Route path={"catalog"} element={<Catalog/>}>
+                      <Route path={"subcatalog"} element={<SubCatalog/>}></Route>
+                  </Route>
               </Route>
           </Routes>
       </BrowserRouter>
