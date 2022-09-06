@@ -14,16 +14,20 @@
       "id": 3,
       "name": "Bass",
       "category": "Electric"
+    },
+    {
+      "name": "Drum",
+      "category": "Acoustic",
+      "id": 4
     }
   ],
-
-  "subProducts": [
+  "subproducts": [
     {
       "id": 1,
       "noProducts": 1,
       "nameBrand": "Fender",
       "series": "J2098",
-      "year": 2011
+      "year": "2012"
     },
     {
       "id": 2,
@@ -31,13 +35,6 @@
       "nameBrand": "Ibanez",
       "series": "X20",
       "year": 2015
-    },
-    {
-      "id": 3,
-      "noProducts": 2,
-      "nameBrand": "Fender",
-      "series": "XZ-2022",
-      "year": 2021
     }
   ]
 }
