@@ -21,8 +21,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path="articles/form/:articleId" element={<ArticleForm />} />
                 <Route path="categories" element={<CategoryList />} />
                 <Route path="categories/form" element={<CategoryForm />} />
+                <Route path="categories/form/:categoryId" element={<CategoryForm />} />
                 <Route path="authors" element={<AuthorList />} />
                 <Route path="authors/form" element={<AuthorForm />} />
+                <Route path="authors/form/:authorId" element={<AuthorForm />} />
             </Route>
         </Routes>
     </BrowserRouter>
