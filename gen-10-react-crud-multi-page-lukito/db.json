@@ -1,14 +1,14 @@
 {
   "articles": [
     {
-      "id": 1,
-      "article_title": "Presiden Gigit Ayam",
-      "article_content": "Lorem ipsum dolor sir amet. Lorem ipsum dolor sir amet. Lorem ipsum dolor sir amet. Lorem ipsum dolor sir amet. ",
-      "article_publish_date": "2022-09-01"
+      "article_title": "Ayam",
+      "article_publish_date": "2022-09-08",
+      "article_content": "Yoi",
+      "id": 1
     },
     {
-      "article_title": "DPR Gigit Uang Rakyat",
-      "article_content": "canda pak",
+      "article_title": "keren",
+      "article_content": "kiouji",
       "article_publish_date": "2022-09-09",
       "id": 2
     }

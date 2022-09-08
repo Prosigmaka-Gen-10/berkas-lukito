@@ -18,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route index element={<Navigate to={"/articles"} replace/> }/>
                 <Route path="articles" element={<ArticleList />} />
                 <Route path="articles/form" element={<ArticleForm />} />
+                <Route path="articles/form/:articleId" element={<ArticleForm />} />
                 <Route path="categories" element={<CategoryList />} />
                 <Route path="categories/form" element={<CategoryForm />} />
                 <Route path="authors" element={<AuthorList />} />
