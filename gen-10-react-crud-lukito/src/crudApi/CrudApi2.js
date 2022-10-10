@@ -201,12 +201,12 @@ export default function CrudApi2() {
         <ul>
             {subProducts.map(subProduct =>
                 <li key={subProduct.id}>
-                    {subProduct.noProducts === 1 || subProduct.noProducts === "1" ? "Guitar Acoustic"
+                    {subProduct.noProducts === 1 || subProduct.noProducts === "1" ? products[0].name + " " + products[0].category
                         :
-                        subProduct.noProducts === 2 || subProduct.noProducts === "2" ? "Guitar Electric"
-                            : subProduct.nameBrand === 3 || subProduct.noProducts === "3" ? "BassElectric"
-                                : subProduct.noProducts === 4 || subProduct.noProducts === "4" ? "Drum Acoustic"
-                                    : subProduct.noProducts === 5 || subProduct.noProducts === "5" ? "Piano" : ""} |
+                        subProduct.noProducts === 2 || subProduct.noProducts === "2" ? products[1].name + " " + products[1].category
+                            : subProduct.nameBrand === 3 || subProduct.noProducts === "3" ? products[2].name + " " + products[2].category
+                                : subProduct.noProducts === 4 || subProduct.noProducts === "4" ? products[3].name + " " + products[3].category
+                                    : subProduct.noProducts === 5 || subProduct.noProducts === "5" ? products[4].name + " " + products[4].category : ""} |
                     Brand: {subProduct.nameBrand} {subProduct.series} {subProduct.year}
 
                     &nbsp;&nbsp;
