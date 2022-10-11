@@ -1,8 +1,8 @@
 export const initialState = {
 	user:
 		{
-			name: 'Mas to',
-		username: "ito",
+			name: 'Mas To',
+		username: "Ito",
 		password: "1234"
 		},
 	role: { rolename:"Admin"},

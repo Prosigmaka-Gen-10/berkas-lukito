@@ -18,7 +18,7 @@ export default function ComponentA () {
 			}else{
 				store.dispatch({
 					type: 'changeName',
-					value: "Mas to"
+					value: "Mas To"
 				})
 			}
 		}else{

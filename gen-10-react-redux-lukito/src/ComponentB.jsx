@@ -21,7 +21,7 @@ export default function ComponentB () {
 			}else{
 				store.dispatch({
 					type: 'changeRole',
-					value: "admin"
+					value: "Admin"
 				})
 			}
 		}else{

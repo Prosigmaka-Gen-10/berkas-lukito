@@ -28,11 +28,15 @@ export default function App () {
     async function handleSubmit(event) {
         event.preventDefault()
         if(yourLoginAcc === false){
-            if(formInput.username !== initialState.user.username) {alert("Login failed!!! Wrong username")}
-            if(formInput.password !== initialState.user.password) {alert("login failed!!! Wrong password")}
-            else{
-                alert("login succeeded")
-                handleChangeIsLogin()
+            if(formInput.username !== initialState.user.username) {
+                alert("Login failed!!! Wrong username")
+            }else{
+                if(formInput.password !== initialState.user.password) {
+                    alert("login failed!!! Wrong password")
+                }else{
+                    alert("login succeeded")
+                    handleChangeIsLogin()
+                }
             }
         }else {
             alert("You has been being login now")
