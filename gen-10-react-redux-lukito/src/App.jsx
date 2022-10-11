@@ -1,25 +1,76 @@
 import store from "./store"
 
-import ComponentA from "./ComponentA"
-import ComponentB from "./ComponentB"
+import ComponentB from "./ComponentB.jsx"
+import ComponentC from "./ComponentC.jsx"
+import {useState} from "react";
+import {initialState} from "./reducer";
+import ComponentA from "./ComponentA.jsx";
+import ComponentD from "./ComponentD.jsx";
+import {useSelector} from "react-redux";
 
 export default function App () {
-    function tampilkanStore () {
+    const yourLoginAcc = useSelector(state => state.isLogin.status)
+    const [formInput, setFormInput] = useState({
+        username: '',
+        password: '',
+    })
+
+    function handleInput(event, inputName) {
+        const copyFormInput = {...formInput}
+        copyFormInput[inputName] = event.target.value
+        setFormInput(copyFormInput)
+    }
+
+    function viewStore () {
         console.log(store.getState())
     }
 
-    function handleUbahNama () {
+    async function handleSubmit(event) {
+        event.preventDefault()
+        if(yourLoginAcc === false){
+            if(formInput.username !== initialState.user.username) {alert("Login failed!!! Wrong username")}
+            if(formInput.password !== initialState.user.password) {alert("login failed!!! Wrong password")}
+            else{
+                alert("login succeeded")
+                handleChangeIsLogin()
+            }
+        }else {
+            alert("You has been being login now")
+        }
+    }
+
+    function handleChangeIsLogin(){
         store.dispatch({
-            type: 'ubahNama',
-            value: 'bambang'
+            type: 'changeStatusLogin',
+            value: true
         })
     }
 
     return <>
-        <h1>hai dunia!</h1>
-        <button onClick={tampilkanStore}>tampilkan isi store</button>
-        <br />
-        <button onClick={handleUbahNama}>ubah nama</button>
+        <h1>Trial Login</h1>
+        <button onClick={viewStore}>View Store Contain</button>
+        <br /><br/>
+        <form onSubmit={(event)=>handleSubmit(event)}>
+            <label>username: <br/></label>
+            <input
+                type={"text"}
+                value={formInput.username}
+                required
+                onChange={(event)=>handleInput(event, "username")}
+            />
+            <br/>
+            <label>password: <br/></label>
+            <input
+                type={"password"}
+                value={formInput.password}
+                onChange={(event)=>handleInput(event, "password")}
+                required
+            />
+            <br/>
+            <label><br/></label>
+            <button>Log In</button>
+
+        </form>
 
         <br /><hr /><br />
 
@@ -28,5 +79,13 @@ export default function App () {
         <br /><hr /><br />
 
         <ComponentB />
+
+        <br /><hr /><br />
+
+        <ComponentC />
+
+        <br /><hr /><br />
+
+        <ComponentD />
     </>
 }

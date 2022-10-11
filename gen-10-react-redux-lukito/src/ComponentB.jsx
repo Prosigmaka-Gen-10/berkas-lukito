@@ -1,11 +1,39 @@
 import store from "./store"
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux"
+
+
 
 export default function ComponentB () {
-	const umurSaya = useSelector(state => state.orang.umur)
+	const yourNameAcc = useSelector(state => state.user.name)
+	const yourPassACC = useSelector(state => state.user.password)
+	const yourLoginAcc = useSelector(state => state.isLogin.status)
+	let count = 0
+
+	function handleChangeRole (event) {
+		event.preventDefault()
+		if(yourLoginAcc === true){
+			count = count + 1
+			if(count % 2 !== 0){
+				store.dispatch({
+					type: 'changeRole',
+					value: "User"
+				})
+			}else{
+				store.dispatch({
+					type: 'changeRole',
+					value: "admin"
+				})
+			}
+		}else{
+			alert("Anda belum login")
+		}
+	}
 
 	return <>
-		saya component B
-		umur saya: {umurSaya}
+		My Component B <br /><br/>
+		My Name: {yourNameAcc}<br />
+		My Pass: {yourPassACC}<br />
+		<br />
+		<button onClick={event => handleChangeRole(event)}>change my role</button>
 	</>
 }
