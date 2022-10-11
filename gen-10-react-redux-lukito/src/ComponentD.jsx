@@ -14,8 +14,8 @@ export default function ComponentD() {
         if(yourLoginAcc === true){
             let text = "Are you sure want to  log out?\n" +
                 "your initial state would be change base on your update\n" +
-                "Press OK if you want logout with save your update to your state\m" +
-                "Press Cancel if you want logout without save your update";
+                "Press OK if you want logout with save your update to your state\n" +
+                "Press Cancel if you won't";
             if (confirm(text) == true) {
                 initialState.user.name=yourNameAcc
                 initialState.user.username = yourUserNameAcc
