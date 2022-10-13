@@ -37,8 +37,6 @@ const userSlice = createSlice({
     }
 })
 
-// export const ubahNama = orangSlice.actions.ubahNama
-// export const ubahUmur = orangSlice.actions.ubahUmur
 export const { changeName,changeUsername,changePassword,changeRole,changeStatusLogin, changeAllExceptLogin } = userSlice.actions
 
 export default userSlice.reducer
