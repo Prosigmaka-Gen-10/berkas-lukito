@@ -1,9 +1,9 @@
-import CompA from "../components/task/CompA.jsx"
+import CompA from "./components/CompA.jsx"
 import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
-import {changeStatusLogin} from "../store/task/Slicer.js";
-import CompB from "../components/task/CompB.jsx"
-import CompC from "../components/task/CompC.jsx";
+import {changeStatusLogin} from "./store/Slicer.js";
+import CompB from "./components/CompB.jsx"
+import CompC from "./components/CompC.jsx";
 
 function App() {
     const dispatch = useDispatch()

@@ -5,7 +5,7 @@ import {
     changePassword,
     changeRole,
     changeUsername
-} from "../../store/task/Slicer.js";
+} from "../store/Slicer.js";
 
 export default function CompB () {
     const dispatch = useDispatch()

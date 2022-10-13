@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from 'react-redux'
-import {changeName, changePassword, changeRole, changeStatusLogin, changeUsername} from "../../store/task/Slicer.js";
+import {changeName, changePassword, changeRole, changeStatusLogin, changeUsername} from "../store/Slicer.js";
 
 export default function CompC () {
     const dispatch = useDispatch()
