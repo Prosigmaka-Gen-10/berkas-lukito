@@ -1,11 +1,11 @@
-import store from "./store"
+import store from "./reducer/store.js"
 
-import ComponentB from "./ComponentB.jsx"
-import ComponentC from "./ComponentC.jsx"
+import ComponentB from "./component/ComponentB.jsx"
+import ComponentC from "./component/ComponentC.jsx"
 import {useState} from "react";
-import {initialState} from "./reducer";
-import ComponentA from "./ComponentA.jsx";
-import ComponentD from "./ComponentD.jsx";
+import {initialState} from "./reducer/reducer.js";
+import ComponentA from "./component/ComponentA.jsx";
+import ComponentD from "./component/ComponentD.jsx";
 import {useSelector} from "react-redux";
 
 export default function App () {

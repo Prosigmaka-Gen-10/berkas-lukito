@@ -1,6 +1,6 @@
-import store from "./store"
+import store from "../reducer/store.js"
 import { useSelector } from "react-redux"
-import {initialState} from "./reducer.js";
+import {initialState} from "../reducer/reducer.js";
 
 export default function ComponentA () {
 	const yourUserNameAcc = useSelector(state => state.user.username)

@@ -1,4 +1,4 @@
-import store from "./store"
+import store from "../reducer/store.js"
 import { useSelector } from "react-redux"
 
 
