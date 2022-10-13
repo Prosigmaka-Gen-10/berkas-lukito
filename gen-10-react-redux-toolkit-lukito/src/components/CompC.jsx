@@ -3,9 +3,6 @@ import {changeName, changePassword, changeRole, changeStatusLogin, changeUsernam
 
 export default function CompC () {
     const dispatch = useDispatch()
-
-    const { name, username, password } = useSelector(state => state.userData.user)
-    const { nameRole } = useSelector(state => state.userData.role)
     const { status } = useSelector(state => state.userData.isLogin)
 
     function handlingLogOut(event){
@@ -17,6 +14,7 @@ export default function CompC () {
                 "Press Cancel if you won't";
             if (confirm(text) === true) {
                 dispatch(changeStatusLogin(false))
+                localStorage.clear()
             } else {
                 dispatch(changeName(localStorage.getItem("name")))
                 dispatch(changeUsername(localStorage.getItem("uname")))
@@ -26,7 +24,7 @@ export default function CompC () {
                 localStorage.clear()
             }
         }else{
-            alert("Anda belum login")
+            alert("You're not login yet")
         }
     }
 
