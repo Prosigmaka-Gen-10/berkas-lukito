@@ -10,10 +10,7 @@ function App() {
     const { status } = useSelector(state => state.userData.isLogin)
     const { name, username, password } = useSelector(state => state.userData.user)
     const { nameRole } = useSelector(state => state.userData.role)
-    const [formInput, setFormInput] = useState({
-        username: '',
-        password: '',
-    })
+    const [formInput, setFormInput] = useState({username: '', password: ''})
 
     function handleInput(event, inputName) {
         const copyFormInput = {...formInput}
@@ -27,15 +24,15 @@ function App() {
             if(formInput.username !== username) {
                 alert("Login failed!!! Wrong username")
             }else{
-                if(formInput.password !== password) {
-                    alert("login failed!!! Wrong password")
-                }else{
+                if (formInput.password === password) {
                     alert("login succeeded")
                     localStorage.setItem("name", name)
                     localStorage.setItem("uname", username)
                     localStorage.setItem("pass", password)
                     localStorage.setItem("role", nameRole)
                     handleChangeIsLogin()
+                } else {
+                    alert("login failed!!! Wrong password")
                 }
             }
         }else {
