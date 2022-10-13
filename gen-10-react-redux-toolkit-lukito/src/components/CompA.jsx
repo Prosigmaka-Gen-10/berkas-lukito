@@ -1,8 +1,6 @@
 import { useSelector } from "react-redux"
 
 export default function CompA () {
-    // const nama = useSelector(state => state.orang.nama)
-    // const umur = useSelector(state => state.orang.umur)
     const { name, username, password } = useSelector(state => state.userData.user)
     const { nameRole } = useSelector(state => state.userData.role)
     const { status } = useSelector(state => state.userData.isLogin)
