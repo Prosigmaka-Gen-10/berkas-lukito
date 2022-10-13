@@ -24,7 +24,7 @@ export default function CompB () {
                 dispatch(changeName('Mas Ito'))
             }
         }else{
-            alert("Anda belum login")
+            alert("You're not login yet")
         }
     }
 
@@ -37,20 +37,20 @@ export default function CompB () {
                 dispatch(changeUsername('Ito'))
             }
         }else{
-            alert("Anda belum login")
+            alert("You're not login yet")
         }
     }
 
     function handleChangePassword () {
-        if(status === true){
+        if (status === true) {
             count = count + 1
-            if(count % 2 !== 0){
+            if (count % 2 !== 0) {
                 dispatch(changePassword('12345678'))
-            }else{
+            } else {
                 dispatch(changePassword('1234'))
             }
-        }else{
-            alert("Anda belum login")
+        } else {
+            alert("You're not login yet")
         }
     }
 
@@ -63,7 +63,7 @@ export default function CompB () {
                 dispatch(changeRole('Admin'))
             }
         }else{
-            alert("Anda belum login")
+            alert("You're not login yet")
         }
     }
 
@@ -86,7 +86,7 @@ export default function CompB () {
                 }))
             }
         }else{
-            alert("Anda belum login")
+            alert("You're not login yet")
         }
     }
 
